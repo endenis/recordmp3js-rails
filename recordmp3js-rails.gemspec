@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Gem for Recordmp3js library for rails}
   spec.description   = %q{Gem for Recordmp3js library for rails. Original: https://github.com/nusofthq/Recordmp3js}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/endenis/recordmp3js-rails"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
