@@ -3,11 +3,12 @@
   var WORKER_PATH = '/js/recorderWorker.js';
   var encoderWorker = new Worker('/js/mp3Worker.js');
 
-  var Recorder = function(source, cfg, endpoint, done_callback){
+  var Recorder = function(source, cfg, endpoint, sent_callback, done_callback){
     var config = cfg || {};
     var bufferLen = config.bufferLen || 4096;
     var numChannels = config.numChannels || 2;
     var upload_endpoint = endpoint;
+    var after_sent_callback = sent_callback;
     var after_upload_callback = done_callback;
     this.context = source.context;
     this.node = (this.context.createScriptProcessor ||
@@ -122,6 +123,7 @@
         li.appendChild(au);
         //li.appendChild(hf);
         recordingslist.appendChild(li);
+        after_sent_callback();
 
             }
         };
