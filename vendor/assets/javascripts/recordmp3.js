@@ -112,15 +112,15 @@
         var url = 'data:audio/mp3;base64,'+encode64(e.data.buf);
         var li = document.createElement('li');
         var au = document.createElement('audio');
-        var hf = document.createElement('a');
+        //var hf = document.createElement('a');
 
         au.controls = true;
         au.src = url;
-        hf.href = url;
-        hf.download = 'audio_recording_' + new Date().getTime() + '.mp3';
-        hf.innerHTML = hf.download;
+        //hf.href = url;
+        //hf.download = 'audio_recording_' + new Date().getTime() + '.mp3';
+        //hf.innerHTML = hf.download;
         li.appendChild(au);
-        li.appendChild(hf);
+        //li.appendChild(hf);
         recordingslist.appendChild(li);
 
             }
